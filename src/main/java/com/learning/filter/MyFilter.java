@@ -1,4 +1,4 @@
-package com.learing.filter;
+package com.learning.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
