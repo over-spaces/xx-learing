@@ -6,5 +6,34 @@
 </head>
 <body>
 <h2 th:text="${name}"></h2>
+
+<div>
+    ID:<span th:text="${emp.id}"></span>
+</div>
+<div>
+    NAME:<span th:text="${emp.name}">111</span>
+</div>
+
+<div th:object="${emp}">
+    ID:<span th:text="*{id}"></span>
+    NAME:<span th:text="*{name}"></span>
+</div>
+
+<div>
+    <ul th:each="color,stat : ${colors}">
+        <li>
+           <span th:text="${stat.index}"></span>
+           <span th:text="${stat.first}"></span>
+           <span th:text="${stat.last}"></span>
+           <span th:text="${stat.size}"></span>
+           <span th:text="${stat.count}"></span>
+           <span th:text="${stat.current}"></span>
+           <span th:text="${stat.even}"></span>
+           <span th:text="${stat.odd}"></span>
+           <span th:text="${color}"></span>
+        </li>
+    </ul>
+</div>
+
 </body>
 </html>
